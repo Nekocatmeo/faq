@@ -1,0 +1,102 @@
+html{
+    background-color: #f9f0ff;
+}
+.App{
+    @font-face {
+        font-family: "Work Sans";
+        src: url(https://fonts.google.com/specimen/Work+Sans);
+        font-size: 16px;
+    }
+    font-family: Work Sans, san-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.App .box_content{
+    position: relative;
+    top: -135px;
+}
+.box_content{
+    max-width: 520px;
+    max-height: fit-content;
+    background-color: #fff;
+    padding: 30px 65px 30px 30px;
+    border-radius: 18px;
+    /* delete overflow when done with logic expand */
+    overflow-y: scroll;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2f1533;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.faq{
+    position: relative;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2f1533;
+    padding: 20px 0px 20px 0px;
+    /* border-bottom: solid 1px #f9f0ff; */
+    cursor: pointer;
+}
+.answer {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #8c6991;
+    padding: 20px 0px 20px 0px;
+    /* border-bottom: solid 1px #f9f0ff; */
+    overflow: hidden;
+    display: none;
+}
+.question:hover{
+    color: #AD28EB;
+}
+/* đã set block cho answer trong fă active nhưng code ko ăn??? */
+.faq.active .answer{
+    display: block;
+}
+.toggle {
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+}
+.toggle-plus{
+    position: absolute;
+    top: -43px;
+    right: -443px;
+}    
+.toggle-plus:hover{
+    opacity: 0.8;
+}
+.toggle-minus{
+    display: none;
+    position: absolute;
+    top: -43px;
+    right: -443px;
+}
+.toggle-minus:hover{
+    opacity: 0.8;
+}
+.faq.active .toggle-minus {
+    display: block;
+}
