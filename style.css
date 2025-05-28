@@ -17,6 +17,7 @@ html{
     right: 0;
     bottom: 0;
     left: 0;
+    overflow-y: scroll;
 }
 .App .box_content{
     position: relative;
@@ -26,10 +27,10 @@ html{
     max-width: 520px;
     max-height: fit-content;
     background-color: #fff;
-    padding: 30px 65px 30px 30px;
+    padding: 30px 30px 30px 30px;
     border-radius: 18px;
     /* delete overflow when done with logic expand */
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 .title{
     display: flex;
@@ -47,10 +48,17 @@ html{
 .faq{
     position: relative;
 }
-
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: solid 1px #f9f0ff;
+}
 .question {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     font-size: 16px;
     font-weight: 600;
     color: #2f1533;
@@ -64,39 +72,49 @@ html{
     line-height: 150%;
     color: #8c6991;
     padding: 20px 0px 20px 0px;
-    /* border-bottom: solid 1px #f9f0ff; */
     overflow: hidden;
-    display: none;
+}
+.faq .answer {
+  display: none;
 }
 .question:hover{
     color: #AD28EB;
 }
 /* đã set block cho answer trong fă active nhưng code ko ăn??? */
+/* code ăn rồi :>, tại viết sai faq với fqa á */
 .faq.active .answer{
     display: block;
+    padding: 0px 0px 20px 0px;
+    border-bottom: solid 1px #f9f0ff;
 }
+.faq.active .faq-header{
+    border-bottom: none;
+}
+
 .toggle {
-    position: absolute;
+    position: relative;
     display: flex;
     cursor: pointer;
+
 }
 .toggle-plus{
-    position: absolute;
-    top: -43px;
-    right: -443px;
+    position: relative;
+    width: 25px;
 }    
 .toggle-plus:hover{
     opacity: 0.8;
 }
 .toggle-minus{
     display: none;
-    position: absolute;
-    top: -43px;
-    right: -443px;
+    position: relative;
+    width: 25px;
 }
 .toggle-minus:hover{
     opacity: 0.8;
 }
 .faq.active .toggle-minus {
     display: block;
+}
+.faq.active .toggle-plus {
+    display: none;
 }
