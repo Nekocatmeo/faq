@@ -123,6 +123,7 @@ html{
 @media only screen and (max-width: 600px) {
 .App .box_content{
     max-width: 279px;
+    top: -47px;
 }
 .box_content{
     width: calc(100vw - 32px);
