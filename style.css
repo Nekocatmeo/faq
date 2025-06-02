@@ -10,18 +10,22 @@ html{
     font-family: Work Sans, san-serif;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    overflow-y: scroll;
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-size: contain;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    
 }
 .App .box_content{
     position: relative;
-    top: -135px;
+
 }
 .box_content{
     max-width: 520px;
@@ -71,13 +75,13 @@ html{
     color: #8c6991;
     padding: 20px 0px 20px 0px;
     overflow: hidden;
-    width: 440px;
+    max-width: 440px;
 }
 .faq .answer {
   display: none;
 }
 
-/* đã set block cho answer trong fă active nhưng code ko ăn??? */
+/* đã set block cho answer trong faq active nhưng code ko ăn??? */
 /* code ăn rồi :>, tại viết sai faq với fqa á */
 .faq.active .answer{
     display: block;
@@ -114,4 +118,32 @@ html{
 }
 .faq.active .toggle-plus {
     display: none;
+}
+/* for mobile device */
+@media only screen and (max-width: 600px) {
+.App .box_content{
+    max-width: 279px;
+}
+.box_content{
+    width: calc(100vw - 32px);
+    border-radius: 10px;
+    padding: 20px 20px 5px 20px;
+}
+.App {
+    padding-inline: 16px;
+    background-image: url(/assets/images/background-pattern-mobile.svg);
+    background-size: contain;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+}
+.title {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.question {
+    font-size: 14px;
+}
+.answer {
+    font-size: 12px;
+}
 }
